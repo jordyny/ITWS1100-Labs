@@ -1,0 +1,121 @@
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B9C5B0;
+  border-bottom: 2px solid #888; /* Add border at the bottom */
+  border-radius: 5px; /* Add rounded corners */
+}
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s; /* Add smooth transition */
+}
+
+.navbar li a:hover {
+  background-color: #8e837b;
+}
+
+.navbar li.active a {
+  background-color: #6a5f57; /* Style for active link */
+}
+
+#header {
+  font-family: 'Pacifico';
+  font-size: 55px;
+  font-weight: 700;
+  color: rgb(161, 164, 229);
+  text-align: center;
+  margin-top: 50px;
+  text-shadow:
+  -1px -1px 0 white,
+  1px -1px 0 #453E29,
+  -1px 1px 0 #453E29,
+  1px 1px 0 #453E29;
+}
+
+
+  
+.header2 {
+  font-family: 'Lexend Deca';
+  text-decoration: underline;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 #453E29, -1px 1px 0 #453E29, 1px 1px 0 #453E29;
+}
+
+#body {
+  background-color: #D1E9EA;
+}
+
+.main_text {
+  width: 30%;
+  display: inline-block;
+  padding: 10px;
+  font-family: 'Be Vietnam Pro';
+  font-weight: bold;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer_text{
+  color: white;
+  font-family: 'Chakra Petch';
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 30px;
+}
+
+.interests{
+  font-family: 'Be Vietnam Pro';
+  font-weight: bold;
+  width: 30%;
+}
