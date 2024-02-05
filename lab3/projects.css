@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-image: linear-gradient(to bottom right, #EDD, #BED, white, #7faaa5);
+}
+
+#header {
+  font-family: 'Segoe Script', cursive;
+  font-size: 48px;
+  color: #9E8675;
+  letter-spacing: 2px;
+  line-height: 2;
+  text-align: center;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 #453E29, -1px 1px 0 #453E29, 1px 1px 0 #453E29;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #B9C5B0;
+  border-bottom: 2px solid #888;
+  border-radius: 5px;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.navbar li a:hover {
+  background-color: #8e837b;
+}
+
+.navbar li.active a {
+  background-color: #6a5f57;
+}
+
+.subheader {
+  font-family: 'Lexend Deca';
+  text-decoration: underline;
+  letter-spacing: 2px;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 #453E29, -1px 1px 0 #453E29, 1px 1px 0 #453E29;
+  padding-left: 20px;
+}
+
+.labs {
+  font-family: 'Chakra Petch';
+  font-size: 20px;
+  line-height: 40px;
+  color: black;
+  font-weight: bold;
+}
+
+.maintext {
+  font-family: 'Chakra Petch';
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+  padding-left: 20px;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer_text{
+  color: white;
+  font-family: 'Chakra Petch';
+  font-size: 15px;
+  line-height: 1.5;
+  padding-left: 30px;
+}
