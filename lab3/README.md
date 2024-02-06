@@ -13,3 +13,4 @@ Logos for Footer - ionicons
 
 Chosen methods according to own preference and guidelines. Also chosen with intention to expand upon the website in the future after learning how to implement JavaScript into the website and/or animate certain aspects of the website. 
 
+http://youngj22rpi.eastus.cloudapp.azure.com/iit/index.html
