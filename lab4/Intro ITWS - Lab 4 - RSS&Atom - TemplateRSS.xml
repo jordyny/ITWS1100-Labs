@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
 <channel>
-	<title>RSS Title</title>
-	<description>This is an example of an RSS feed</description>
-	<link>http://www.example.com/</link>
-	<lastBuildDate>Tue, 12 Oct 2010 00:01:00 +0000 </lastBuildDate>
-	<pubDate>Tue, 12 Oct 2010 00:01:00 +0000 </pubDate>
+  <title>Jordyn's RSS</title>
+  <description>Here is my Azure</description>
+  <link>http://youngj22rpi.eastus.cloudapp.azure.com/iit/</link>
+  <lastBuildDate>Tue, 12 Oct 2010 00:01:00 +0000 </lastBuildDate>
+  <pubDate>Tue, 12 Oct 2010 00:01:00 +0000 </pubDate>
  
-	<item>
-		<title>Example entry</title>
-		<description>Here is some text containing an interesting description of the thing to be described.</description>
-		<link>http://www.wikipedia.org/</link>
-		<guid>http://www.example.com/uniqueStringPerItem</guid>
-	  <pubDate>Tue, 12 Oct 2010 00:45:00 +0000 </pubDate>
-	</item>
+  <item>
+    <title>How to test a Moon landing from Earth</title>
+	<description>The world is racing to land on the Moon. How do space agencies and commercial companies test their landers ahead of time?</description>
+	<link>https://www.nature.com/articles/d41586-024-00352-w</link>
+	<guid>http://youngj22rpi.eastus.cloudapp.azure.com/iit/</guid>
+	<pubDate>Thu, 08 Feb 2024 00:00:00 +0000 </pubDate>
+  </item>
+
+  <item>
+	<title>Toxic Culture Is Driving the Great Resignation</title>
+	<description>Research using employee data reveals the top five predictors of attrition and four actions managers can take in the short term to reduce attrition.</description>
+	<link>https://sloanreview.mit.edu/article/toxic-culture-is-driving-the-great-resignation/</link>
+    <pubDate>Tue, 11 Jan 2022 00:00:00 +0000 </pubDate>
+  </item>
+
+  <item>
+	<title>Why furniture got so bad</title>
+	<description>Furniture used to last generations. Now it barely survives a move. Industry insiders explain.</description>
+	<link>https://www.washingtonpost.com/home/2023/09/05/new-furniture-quality-doesnt-last/</link>
+	<pubDate>Tue, 05 Sep 2023 00:00:00 +0000 </pubDate>
+  </item>
  
+  <item>
+	<title>6 Ways Trees Benefit All of Us</title>
+	<description>From a city park to a vast forest, trees deliver for us when we help them thrive.</description>
+	<link>https://www.nature.org/en-us/what-we-do/our-priorities/build-healthy-cities/cities-stories/benefits-of-trees-forests/</link>
+	<pubDate>Fri, 09 Oct 2020 00:00:00 +0000 </pubDate>
+  </item>
+
+  <item>
+	<title>It's Time for an RSS Revival</title>
+	<description>After years of letting algorithms make up our minds for us, the time is right to go back to basics.</description>
+	<link>https://www.wired.com/story/rss-readers-feedly-inoreader-old-reader/</link>
+	<pubDate>Fri, 30 Mar 2018 00:08:00 +0000 </pubDate>
+  </item>
 </channel>
 </rss>
 
