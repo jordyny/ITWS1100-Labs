@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <?xml-stylesheet type="text/css" href="atom.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+	<title>Jordyn's Atom Feed</title>
+	<subtitle>Linked is my Azure.</subtitle>
+	<id>http://youngj22rpi.eastus.cloudapp.azure.com/iit/</id>
+	<link href="http://youngj22rpi.eastus.cloudapp.azure.com/iit/" rel="self" />
+	<link href="http://youngj22rpi.eastus.cloudapp.azure.com" />
+	<updated>2024-02-15T15:45:00Z</updated>
+	<author>
+		<name>Jordyn Young</name>
+		<email>youngj22@rpi.edu</email>
+	</author>
+ 
+	<entry>
+		<title>How to test a Moon landing from Earth</title>
+		<id>https://www.nature.com/articles/d41586-024-00352-w</id>
+		<link href="https://www.nature.com/articles/d41586-024-00352-w" />
+		<updated>2024-02-08T00:00:00Z</updated>
+		<summary>The world is racing to land on the Moon. How do space agencies and commercial companies test their landers ahead of time?</summary>
+	</entry>
+
+	<entry>
+		<title>Toxic Culture Is Driving the Great Resignation</title>
+		<id>https://sloanreview.mit.edu/article/toxic-culture-is-driving-the-great-resignation/</id>
+		<link href="https://sloanreview.mit.edu/article/toxic-culture-is-driving-the-great-resignation/" />
+		<updated>2022-01-11T00:00:00Z</updated>
+		<summary>Research using employee data reveals the top five predictors of attrition and four actions managers can take in the short term to reduce attrition.</summary>
+	</entry>
+
+	<entry>
+		<title>Why furniture got so bad</title>
+		<id>https://www.washingtonpost.com/home/2023/09/05/new-furniture-quality-doesnt-last/</id>
+		<link href="https://www.washingtonpost.com/home/2023/09/05/new-furniture-quality-doesnt-last/" />
+		<updated>2023-09-05T00:00:00Z</updated>
+		<summary>Furniture used to last generations. Now it barely survives a move. Industry insiders explain.</summary>
+	</entry>
+
+	<entry>
+		<title>6 Ways Trees Benefit All of Us</title>
+		<id>https://www.nature.org/en-us/what-we-do/our-priorities/build-healthy-cities/cities-stories/benefits-of-trees-forests/</id>
+		<link href="https://www.nature.org/en-us/what-we-do/our-priorities/build-healthy-cities/cities-stories/benefits-of-trees-forests/" />
+		<updated>2020-10-09T00:00:00Z</updated>
+		<summary>From a city park to a vast forest, trees deliver for us when we help them thrive.</summary>
+	</entry>
+
+	<entry>
+		<title>It's Time for an RSS Revival</title>
+		<id>https://www.wired.com/story/rss-readers-feedly-inoreader-old-reader/</id>
+		<link href="https://www.wired.com/story/rss-readers-feedly-inoreader-old-reader/" />
+		<updated>2018-03-30T00:08:00Z</updated>
+		<summary>After years of letting algorithms make up our minds for us, the time is right to go back to basics.</summary>
+	</entry>
+ 
+</feed>
+
+
+
