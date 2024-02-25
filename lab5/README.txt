@@ -11,3 +11,6 @@ to see how to do the extra credit portion of highlighting the first box on first
 
 In this Lab(5), I started my first use of JavaScript and implemented the onclick function, the alert() function, solved 
 the crimes by using for in the div tag as well as using the focus selector to highlight the input boxes.
+
+Working URL to personal homepage :
+https://youngj22rpi.eastus.cloudapp.azure.com/iit/index.html
