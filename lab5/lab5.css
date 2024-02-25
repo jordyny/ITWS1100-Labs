@@ -32,3 +32,11 @@ fieldset {
 #save {
    float: right;
 }
+
+.value input:focus{
+   background-color: #fee;
+}
+
+.value textarea:focus{
+   background-color: #fee;
+}
