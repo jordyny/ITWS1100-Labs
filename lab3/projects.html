@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch">
   <link rel = "stylesheet" href="./projects.css">
+  <script type="text/javascript" src="../lab8/resources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../lab8/lab8.js"></script>
 </head>
 
 <body>
@@ -15,7 +17,17 @@
     <li><a href="../index.html" class="active">Home</a></li>
     <li><a href="#">Projects</a></li>
   </ul>
-  <h2 class = "subheader">Labs:</h2>
+  <h2>Projects</h2>
+  <!-- Projects will be loaded here dynamically -->
+  <div id="showHideBlock">
+    <div id="showHideLinks">
+       <a href="#" id="hideText">Hide Labs</a> |
+       <a href="#" id="showText">Show Labs</a>
+    </div>
+    <div id="projects-menu"></div>
+    </div>
+  </div>
+  <!-- <h2 class = "subheader">Labs:</h2>
   <p class = "maintext">Here is a running list of Intro to ITWS labs I have worked on:</p>
   <ul>
     <li class = "labs"><a href="./lab1.html">Lab 1</a></li>
@@ -43,7 +55,7 @@
       <ul>
         <li class = "maintext">Worked with jQuery and event handling.</li>
       </ul>
-  </ul>
+  </ul> -->
 
 
   <footer class="footer">

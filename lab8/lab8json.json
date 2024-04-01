@@ -1,0 +1,54 @@
+{
+   "menuItem": [
+      {
+         "lab_title": "Lab 1",
+         "name": "Setup",
+         "path": "../lab3/lab1.html",
+         "landing_title": "Lab 1",
+         "description": "Worked on creating first Azure instance, creating GitHub account, linking GitHub and Azure, creating PHPMyAdmin, and running first HTML Website."
+      },
+
+      {
+         "lab_title": "Lab 2",
+         "name": "Resume",
+         "path": "../lab3/lab2.html",
+         "landing_title": "Lab 2",
+         "description": "Created Personal Resume using HTML and CSS."
+      },
+      {
+         "lab_title": "Lab 3",
+         "name": "Website",
+         "path": "../lab3/lab3.html",
+         "landing_title": "Lab 3",
+         "description": "Created Personal Website for projects using HTML and CSS."
+      },
+      {
+         "lab_title": "Lab 4",
+         "name": "RSS & Atom Feed",
+         "path": "../lab3/lab4.html",
+         "landing_title": "Lab 4",
+         "description": "Created Atom and RSS Feeds."
+      },
+      {
+         "lab_title": "Lab 5",
+         "name": "JavaScript",
+         "path": "../lab3/lab5.html",
+         "landing_title": "Lab 5",
+         "description": "Worked on an HTML form to provide user feedback and validation."
+      },
+      {
+         "lab_title": "Lab 6",
+         "name": "jQuery",
+         "path": "../lab3/lab6.html",
+         "landing_title": "Lab 6",
+         "description": "Worked with jQuery and event handling."
+      },
+      {
+         "lab_title": "Lab 8",
+         "name": "Dynamic Website",
+         "path": "../lab3/lab8.html",
+         "landing_title": "Lab 8",
+         "description": "Worked with jQuery and event handling."
+      }
+   ]
+}
