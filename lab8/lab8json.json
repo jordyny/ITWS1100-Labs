@@ -49,6 +49,13 @@
          "path": "../lab3/lab8.html",
          "landing_title": "Lab 8",
          "description": "Worked with jQuery and event handling."
+      },
+      {
+         "lab_title": "Lab 9",
+         "name": "Dynamic RSS and Atom Feed",
+         "path": "../lab3/lab9.html",
+         "landing_title": "Lab 9",
+         "description": "Dynamic RSS and Atom Feed"
       }
    ]
 }

@@ -3,36 +3,50 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Lab 8</title>
+  <title>Lab 9</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Be+Vietnam+Pro">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Chakra+Petch">
-  <link rel = "stylesheet" href="./lab8.css">
+  <link rel = "stylesheet" href="./lab9.css">
+  <script type="text/javascript" src="../lab8/resources/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../lab9/lab9.js"></script>
 </head>
 
 <body>
-  <h1 id="header">Lab 8</h1>
+  <h1 id="header">Lab 9</h1>
   <ul class="navbar">
     <li><a href="../index.html" class="active">Home</a></li>
     <li><a href="./projects.html">Projects</a></li>
   </ul>
-  <h2 class = "subheader">Lab 8:</h2>
-  <p class="maintext">Here is what I worked on in Lab 8:</p>
+  <h2 class = "subheader">Lab 9:</h2>
+  <p class="maintext">Here is what I worked on in Lab 9:</p>
   <ul class="maintext"> 
     <li>
-        Created a dynamic website with JavaScript, JSON, and AJAX.
+      Used the RSS & Atom feeds that I created in
+      lab 4 to create the data dynamically in
+      a presentable format using JavaScript, JSON, and AJAX.
     </li>
-    <a href="../lab8/lab8json.json">Link to json file</a>
-    <br>
-    <a href="../lab8/lab8.js">Link to js file</a>
-    <p>JSON File: </p>
-    <div class="iframe-container">
-        <iframe src="../lab8/lab8json.json" title="Embedded Webpage"></iframe>
-    </div>
-    <br>
-    <p>JS File: </p>
-    <div class="iframe-container">
-      <iframe src="../lab8/lab8.js" title="Embedded Webpage"></iframe>
-    </div>
+
+    <li>
+      RSS Feed:
+      <div id="showHideBlock">
+        <div id="showHideLinks">
+          <br>
+           <a href="#" id="hideRSS">Hide RSS Feed</a> |
+           <a href="#" id="showRSS">Show RSS Feed</a>
+        </div>
+      <div id="lab9RSS"></div>
+    </li>
+    <li>
+      Atom Feed:
+      <div id="showHideBlock">
+        <div id="showHideLinks">
+          <br>
+           <a href="#" id="hideAtom">Hide Atom Feed</a> |
+           <a href="#" id="showAtom">Show Atom Feed</a>
+        </div>
+      <div id="lab9Atom"></div>
+    </li>
+
     
   </ul>
 
