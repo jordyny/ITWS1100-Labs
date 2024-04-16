@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 16, 2024 at 12:29 AM
+-- Generation Time: Apr 16, 2024 at 12:55 AM
 -- Server version: 10.6.16-MariaDB-0ubuntu0.22.04.1
 -- PHP Version: 8.1.2-1ubuntu2.14
 
@@ -56,22 +56,20 @@ INSERT INTO `actors` (`actorid`, `firstName`, `lastName`, `dob`) VALUES
 --
 
 CREATE TABLE `actor_movie_relationship` (
-  `actorid` int(10) UNSIGNED NOT NULL,
-  `movieid` int(10) UNSIGNED NOT NULL
+  `movieID` int(10) UNSIGNED DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `full_name` varchar(100) DEFAULT NULL,
+  `actorID` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `actor_movie_relationship`
 --
 
-INSERT INTO `actor_movie_relationship` (`actorid`, `movieid`) VALUES
-(2, 1),
-(2, 2),
-(3, 2),
-(4, 3),
-(4, 4),
-(5, 4),
-(5, 5);
+INSERT INTO `actor_movie_relationship` (`movieID`, `title`, `full_name`, `actorID`) VALUES
+(2, 'Black Widow', 'Finn Wolfhard', 2),
+(4, 'The Lord of the Rings: The Fellowship of the Ring', 'Michael Jordan', 4),
+(5, 'Up in the Air', 'Will Smith', 5);
 
 -- --------------------------------------------------------
 
@@ -107,13 +105,6 @@ ALTER TABLE `actors`
   ADD PRIMARY KEY (`actorid`);
 
 --
--- Indexes for table `actor_movie_relationship`
---
-ALTER TABLE `actor_movie_relationship`
-  ADD PRIMARY KEY (`actorid`,`movieid`),
-  ADD KEY `movieid` (`movieid`);
-
---
 -- Indexes for table `movies`
 --
 ALTER TABLE `movies`
@@ -134,17 +125,6 @@ ALTER TABLE `actors`
 --
 ALTER TABLE `movies`
   MODIFY `movieid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `actor_movie_relationship`
---
-ALTER TABLE `actor_movie_relationship`
-  ADD CONSTRAINT `actor_movie_relationship_ibfk_1` FOREIGN KEY (`actorid`) REFERENCES `actors` (`actorid`),
-  ADD CONSTRAINT `actor_movie_relationship_ibfk_2` FOREIGN KEY (`movieid`) REFERENCES `movies` (`movieid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
