@@ -22,7 +22,7 @@ $dbOk = false;
 
 /* Create a new database connection object, passing in the host, username,
      password, and database to use. The "@" suppresses errors. */
-@$db = new mysqli('localhost', 'root', 'root', 'iitF23');
+@$db = new mysqli('localhost', 'root', 'root', 'iit');
 
 if ($db->connect_error) {
    echo '<div class="messages">Could not connect to the database. Error: ';
@@ -162,9 +162,9 @@ if ($havePost) {
          echo '</td></tr>';
          // Uncomment the following three lines to see the underlying
          // associative array for each record.
-         // echo '<tr><td colspan="3" style="white-space: pre;">';
-         // print_r($record);
-         // echo '</td></tr>';
+         echo '<tr><td colspan="3" style="white-space: pre;">';
+         print_r($record);
+         echo '</td></tr>';
       }
 
       $result->free();
@@ -175,6 +175,44 @@ if ($havePost) {
 
    ?>
 </table>
+
+
+<h3>Movies</h3>
+<table id="moviesTable">
+<?php
+  if ($dbOk) {
+
+    $query = 'select * from movies order alphabetically';
+    $result = $db->query($query);
+    $numRecords = $result->num_rows;
+
+    echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
+    for ($i=0; $i < $numRecords; $i++) {
+      $record = $result->fetch_assoc();
+      if ($i % 2 == 0) {
+        echo "\n".'<tr id="movie-' . $record['movieid'] . '"><td>';
+      } else {
+        echo "\n".'<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
+      }
+      echo htmlspecialchars($record['title']) . ', ';
+      echo '</td><td>';
+      echo htmlspecialchars($record['year']);
+      echo '</td><td>';
+      echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete actor"/>';
+      echo '</td></tr>';
+      echo '<tr><td colspan="3" style="white-space: pre;">';
+      print_r($record);
+      echo '</td></tr>';
+    }
+
+    $result->free();
+
+    $db->close();
+  }
+
+?>
+</table>
+
 
 <?php include('includes/foot.inc.php');
 // footer info and closing tags
