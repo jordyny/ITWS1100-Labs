@@ -168,76 +168,11 @@ if ($havePost) {
       }
 
       $result->free();
+
+      // Finally, let's close the database
+      $db->close();
    }
-   ?>
-</table>
 
-<h3>Movies</h3>
-<table id="movieTable">
-   <?php
-   if ($dbOk) {
-
-      $query = 'select * from movies order by title';
-      $result = $db->query($query);
-      $numRecords = $result->num_rows;
-
-      echo '<tr><th>Title:</th><th>Year:</th><th></th></tr>';
-      for ($i = 0; $i < $numRecords; $i++) {
-         $record = $result->fetch_assoc();
-         if ($i % 2 == 0) {
-            echo "\n" . '<tr id="movie-' . $record['movieid'] . '"><td>';
-         } else {
-            echo "\n" . '<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
-         }
-         echo htmlspecialchars($record['title']) . ', ';
-         echo '</td><td>';
-         echo htmlspecialchars($record['year']);
-         echo '</td><td>';
-         echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
-         echo '</td></tr>';
-         // Uncomment the following three lines to see the underlying
-         // associative array for each record.
-         // echo '<tr><td colspan="3" style="white-space: pre;">';
-         // print_r($record);
-         // echo '</td></tr>';
-      }
-
-      $result->free();
-   }
-   ?>
-</table>
-
-<h3>Movies and Actors</h3>
-<table id="movieActorTable">
-   <?php
-   if ($dbOk) {
-      // Fetch movies and their corresponding actors from the database
-      $query = 'SELECT m.title AS movie_title, a.first_names AS actor_first_names, a.last_name AS actor_last_name, a.dob AS actor_dob
-                FROM movies m
-                INNER JOIN actor_movie_relationship amr ON m.movieid = amr.movieid
-                INNER JOIN actors a ON amr.actorid = a.actorid
-                ORDER BY m.title';
-      $result = $db->query($query);
-      $numRecords = $result->num_rows;
-
-      echo '<tr><th>Movie Title</th><th>Actor Name</th><th>Date of Birth</th></tr>';
-      for ($i = 0; $i < $numRecords; $i++) {
-         $record = $result->fetch_assoc();
-         if ($i % 2 == 0) {
-            echo "\n" . '<tr id="movie-actor-' . $record['movie_actor_id'] . '"><td>';
-         } else {
-            echo "\n" . '<tr class="odd" id="movie-actor-' . $record['movie_actor_id'] . '"><td>';
-         }
-         echo htmlspecialchars($record['movie_title']);
-         echo '</td><td>';
-         echo htmlspecialchars($record['actor_first_names']) . ' ' . htmlspecialchars($record['actor_last_name']);
-         echo '</td><td>';
-         echo htmlspecialchars($record['actor_dob']);
-         echo '</td></tr>';
-      }
-
-      $result->free();
-   }
    ?>
 </table>
 
