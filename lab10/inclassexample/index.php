@@ -150,7 +150,7 @@ if ($havePost) {
       $result = $db->query($query);
       $numRecords = $result->num_rows;
 
-      echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
+      echo '<tr><th>Name:</th><th>Date of Birth:</th></tr>';
       for ($i = 0; $i < $numRecords; $i++) {
          $record = $result->fetch_assoc();
          if ($i % 2 == 0) {
