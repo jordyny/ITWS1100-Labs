@@ -142,7 +142,7 @@ if ($havePost) {
 </form>
 
 <h3>Actors</h3>
-<table id="actorTable">
+<table id="movieTable">
    <?php
    if ($dbOk) {
 
