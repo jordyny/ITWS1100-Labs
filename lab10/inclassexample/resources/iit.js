@@ -116,7 +116,7 @@ $(document).ready(function() {
             $("#jsMessages").html("<h4>Movie deleted</h4>").show();
             
             // re-zebra the table
-            $("#moviesTable tr").each(function(i){
+            $("#movieTable tr").each(function(i){
               if (i % 2 == 0) {
                 // we must compensate for the header row...
                 $(this).addClass("odd"); 
