@@ -25,7 +25,7 @@ if ($db->connect_error) {
 
 // Display movies and their corresponding actors
 echo '<h3>Movies and Actors</h3>';
-echo '<table id="relationshipsTable">';
+echo '<table id="movieTable">';
 if ($dbOk) {
     $query = 'SELECT * FROM actor_movie_relationship';
     $result = $db->query($query);

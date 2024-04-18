@@ -17,7 +17,7 @@ function validate(formObj) {
       formObj.dob.focus();
       return false;
     }
-  } else if (formObj.title && formObj.year) { 
+  } else if (formObj.title && formObj.year) { // Movie form validation
     if (formObj.title.value === "") {
       alert("Please enter a movie title");
       formObj.title.focus();
