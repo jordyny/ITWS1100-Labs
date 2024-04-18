@@ -178,8 +178,6 @@ if ($havePost) {
       $db->close();
    }
 
-   ?>
-</table>
 
 
 ?>
