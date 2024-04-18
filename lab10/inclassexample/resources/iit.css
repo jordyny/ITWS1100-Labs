@@ -168,19 +168,19 @@ td {
 }
 
 
-#relationshipTable {
+#relationshipsTable {
   width: 100%;
   border-spacing: 0;
   border: 1px solid #333;
 }
-#relationshipTable th {
+#relationshipsTable th {
   background-color: #ddc;
   padding: 2px 4px;
 }
-#relationshipTable td {
+#relationshipsTable td {
   padding: 2px 4px;
 }
-#relationshipTable tr.odd td {
+#relationshipsTable tr.odd td {
   background-color: #eed;
   color: black;
 }
