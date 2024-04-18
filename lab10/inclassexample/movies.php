@@ -100,11 +100,10 @@ if ($havePost) {
                 echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
                 echo '</td></tr>';
             }
-        } else {
-            echo '<tr><td colspan="2">No movies found</td></tr>';
-        }
+            $result->free();
 
-        $result->free();
+            // Finally, let's close the database
+            $db->close();
     }
     ?>
 </table>
