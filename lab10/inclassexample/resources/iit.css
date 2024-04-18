@@ -146,19 +146,19 @@ td {
   cursor: pointer;
 }
 
-#movieTable {
+#moviesTable {
   width: 100%;
   border-spacing: 0;
   border: 1px solid #333;
 }
-#movieTable th {
+#moviesTable th {
   background-color: #ddc;
   padding: 2px 4px;
 }
-#movieTable td {
+#moviesTable td {
   padding: 2px 4px;
 }
-#movieTable tr.odd td {
+#moviesTable tr.odd td {
   background-color: #eed;
   color: black;
 }
