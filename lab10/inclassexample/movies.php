@@ -83,7 +83,7 @@ if ($havePost) {
 </form>
 
 <h3>Movies</h3>
-<table id="actorTable">
+<table id="movieTable">
     <?php
     if ($dbOk) {
         $query = 'SELECT * FROM movies ORDER BY title';
