@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Apr 16, 2024 at 12:55 AM
+-- Generation Time: Apr 18, 2024 at 02:54 AM
 -- Server version: 10.6.16-MariaDB-0ubuntu0.22.04.1
 -- PHP Version: 8.1.2-1ubuntu2.14
 
@@ -39,7 +39,6 @@ CREATE TABLE `actors` (
 --
 
 INSERT INTO `actors` (`actorid`, `first_names`, `last_name`, `dob`) VALUES
-(1, 'Timothee', 'Chalamet', '1995-12-27'),
 (2, 'Finn', 'Wolfhard', '2002-12-23'),
 (3, 'Adam', 'Sandler', '1966-09-09'),
 (4, 'Michael', 'Jordan', '1987-02-09'),
@@ -124,7 +123,7 @@ ALTER TABLE `actors`
 -- AUTO_INCREMENT for table `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `movieid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `movieid` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
