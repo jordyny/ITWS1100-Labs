@@ -56,6 +56,13 @@
          "path": "../lab3/lab9.html",
          "landing_title": "Lab 9",
          "description": "Dynamic RSS and Atom Feed"
-      }
+      },
+      {
+         "lab_title": "Lab 10",
+         "name": "PHP and SQL",
+         "path": "../lab3/lab10.html",
+         "landing_title": "Lab 10",
+         "description": "Import, modify, and export a database"
+      } 
    ]
 }
