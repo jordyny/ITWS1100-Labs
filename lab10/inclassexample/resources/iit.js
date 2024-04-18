@@ -17,6 +17,18 @@ function validate(formObj) {
     formObj.dob.focus();
     return false;
   }
+
+  if (formObj.title.value == "") {
+    alert("Please enter a title");
+    formObj.title.focus();
+    return false;
+  }
+
+  if (formObj.year.value == "") {
+    alert("Please enter a year");
+    formObj.year.focus();
+    return false;
+  }
     
   return true;
 }
@@ -81,6 +93,14 @@ $(document).ready(function() {
     }
   });
 
+
+  
+});
+
+$(document).ready(function() {
+  
+  // focus the name field on first load of the page
+  $("#title").focus();
   $(".deleteMovie").click(function() {
     if(confirm("Remove movie? (This action cannot be undone.)")) {
       
@@ -136,3 +156,5 @@ $(document).ready(function() {
   });
   
 });
+
+
