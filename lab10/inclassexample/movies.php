@@ -11,28 +11,81 @@ include('includes/head.inc.php');
 
 <?php include('includes/menubody.inc.php'); ?>
 
+<?php
+// Database connection
+$dbOk = false;
+@$db = new mysqli('localhost', 'root', 'j0000rdyn!', 'iit');
+
+if ($db->connect_error) {
+    echo '<div class="messages">Could not connect to the database. Error: ';
+    echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
+} else {
+    $dbOk = true;
+}
+
+// Process form submission
+$havePost = isset($_POST["save"]);
+$errors = '';
+if ($havePost) {
+    // Form validation and insertion logic
+    $title = htmlspecialchars(trim($_POST["title"]));
+    $year = htmlspecialchars(trim($_POST["year"]));
+
+    if ($title == '') {
+        $errors .= '<li>Title may not be blank</li>';
+    }
+    if ($year == '') {
+        $errors .= '<li>Year may not be blank</li>';
+    }
+
+    if ($errors != '') {
+        echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
+        echo $errors;
+        echo '</ul></div>';
+    } else {
+        if ($dbOk) {
+            $titleForDb = trim($_POST["title"]);
+            $yearForDb = trim($_POST["year"]);
+
+            $insQuery = "INSERT INTO movies (`title`, `year`) VALUES (?, ?)";
+            $statement = $db->prepare($insQuery);
+            $statement->bind_param("ss", $titleForDb, $yearForDb);
+            $statement->execute();
+
+            echo '<div class="messages"><h4>Success: ' . $statement->affected_rows . ' movie added to database.</h4>';
+            echo $title . ', released in ' . $year . '</div>';
+
+            $statement->close();
+        }
+    }
+}
+?>
+
+<h3>Add Movie</h3>
+<form id="addForm" name="addForm" action="movies.php" method="post" onsubmit="return validate(this);">
+    <fieldset>
+        <div class="formData">
+            <label class="field" for="title">Title:</label>
+            <div class="value"><input type="text" size="60" value="<?php if ($havePost && $errors != '') { echo $title; } ?>" name="title" id="title" /></div>
+
+            <label class="field" for="year">Year:</label>
+            <div class="value"><input type="text" size="10" maxlength="4" value="<?php if ($havePost && $errors != '') { echo $year; } ?>" name="year" id="year" /></div>
+
+            <input type="submit" value="Save" id="save" name="save" />
+        </div>
+    </fieldset>
+</form>
+
 <h3>Movies</h3>
 <table id="moviesTable">
     <?php
-    // Database connection
-    $dbOk = false;
-    @$db = new mysqli('localhost', 'root', 'j0000rdyn!', 'iit');
-
-    if ($db->connect_error) {
-        echo '<div class="messages">Could not connect to the database. Error: ';
-        echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
-    } else {
-        $dbOk = true;
-    }
-
     if ($dbOk) {
-        // Query movies table and display results
         $query = 'SELECT * FROM movies ORDER BY title';
         $result = $db->query($query);
         $numRecords = $result->num_rows;
 
         if ($numRecords > 0) {
-            echo '<tr><th>Title:</th><th>Year:</th><th></th></tr>';
+            echo '<tr><th>Title:</th><th>Year:</th></tr>';
             for ($i = 0; $i < $numRecords; $i++) {
                 $record = $result->fetch_assoc();
                 if ($i % 2 == 0) {
@@ -40,19 +93,16 @@ include('includes/head.inc.php');
                 } else {
                     echo "\n" . '<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
                 }
-                echo htmlspecialchars($record['title']) . ', ';
+                echo htmlspecialchars($record['title']);
                 echo '</td><td>';
                 echo htmlspecialchars($record['year']);
-                echo '</td><td>';
-                echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
                 echo '</td></tr>';
             }
         } else {
-            echo '<tr><td colspan="3">No movies found</td></tr>';
+            echo '<tr><td colspan="2">No movies found</td></tr>';
         }
 
         $result->free();
-        $db->close();
     }
     ?>
 </table>
