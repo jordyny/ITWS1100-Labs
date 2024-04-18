@@ -31,13 +31,25 @@ if ($dbOk) {
     $result = $db->query($query);
     $numRecords = $result->num_rows;
     echo '<tr><th>Movie:</th><th>Actor:</th></tr>';
-    while ($record = $result->fetch_assoc()) {
-        echo '<tr><td>';
+    for ($i = 0; $i < $numRecords; $i++) {
+        $record = $result->fetch_assoc();
+        if ($i % 2 == 0) {
+            echo "\n" . '<tr id="movie-' . $record['movieid'] . '"><td>';
+        } else {
+            echo "\n" . '<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
+        }
         echo htmlspecialchars($record['title']);
         echo '</td><td>';
         echo htmlspecialchars($record['full_name']);
         echo '</td></tr>';
     }
+    // while ($record = $result->fetch_assoc()) {
+    //     echo '<tr><td>';
+    //     echo htmlspecialchars($record['title']);
+    //     echo '</td><td>';
+    //     echo htmlspecialchars($record['full_name']);
+    //     echo '</td></tr>';
+    // }
     $result->free();
 
     // Finally, let's close the database
