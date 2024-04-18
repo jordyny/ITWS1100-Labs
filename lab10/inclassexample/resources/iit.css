@@ -126,7 +126,7 @@ th {
 td {
   padding-right: 1em;
 }
-#actorTable {
+#actorTable, #moviesTable {
   width: 100%;
   border-spacing: 0;
   border: 1px solid #333;
@@ -146,11 +146,11 @@ td {
   cursor: pointer;
 }
 
-#moviesTable {
+/* #moviesTable {
   width: 100%;
   border-spacing: 0;
   border: 1px solid #333;
-}
+} */
 #moviesTable th {
   background-color: #ddc;
   padding: 2px 4px;

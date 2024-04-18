@@ -42,6 +42,11 @@ if ($havePost) {
         echo '<div class="messages"><h4>Please correct the following errors:</h4><ul>';
         echo $errors;
         echo '</ul></div>';
+        echo '<script type="text/javascript">';
+        echo '  $(document).ready(function() {';
+        echo '    $("' . $focusId . '").focus();';
+        echo '  });';
+        echo '</script>';
     } else {
         if ($dbOk) {
             $titleForDb = trim($_POST["title"]);
@@ -80,7 +85,7 @@ if ($havePost) {
 <table id="moviesTable">
     <?php
     if ($dbOk) {
-        $query = 'SELECT * FROM movies ORDER BY title';
+      $query = 'select * from actors order by title';
         $result = $db->query($query);
         $numRecords = $result->num_rows;
         echo '<tr><th>Title:</th><th>Year:</th></tr>';
