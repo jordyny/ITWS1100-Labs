@@ -83,27 +83,25 @@ if ($havePost) {
         $query = 'SELECT * FROM movies ORDER BY title';
         $result = $db->query($query);
         $numRecords = $result->num_rows;
-
-        if ($numRecords > 0) {
-            echo '<tr><th>Title:</th><th>Year:</th></tr>';
-            for ($i = 0; $i < $numRecords; $i++) {
-                $record = $result->fetch_assoc();
-                if ($i % 2 == 0) {
-                    echo "\n" . '<tr id="movie-' . $record['movieid'] . '"><td>';
-                } else {
-                    echo "\n" . '<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
-                }
-                echo htmlspecialchars($record['title']);
-                echo '</td><td>';
-                echo htmlspecialchars($record['year']);
-                echo '</td></td>';
-                echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
-                echo '</td></tr>';
+        echo '<tr><th>Title:</th><th>Year:</th></tr>';
+        for ($i = 0; $i < $numRecords; $i++) {
+            $record = $result->fetch_assoc();
+            if ($i % 2 == 0) {
+                echo "\n" . '<tr id="movie-' . $record['movieid'] . '"><td>';
+            } else {
+                echo "\n" . '<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
             }
-            $result->free();
+            echo htmlspecialchars($record['title']);
+            echo '</td><td>';
+            echo htmlspecialchars($record['year']);
+            echo '</td></td>';
+            echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
+            echo '</td></tr>';
+        }
+        $result->free();
 
-            // Finally, let's close the database
-            $db->close();
+        // Finally, let's close the database
+        $db->close();
     }
     ?>
 </table>
