@@ -83,7 +83,7 @@ if ($havePost) {
 </form>
 
 <h3>Movies</h3>
-<table id="moviesTable">
+<table id="movieTable">
     <?php
     if ($dbOk) {
         $query = 'SELECT * FROM movies ORDER BY title';
@@ -100,7 +100,7 @@ if ($havePost) {
             echo htmlspecialchars($record['title']);
             echo '</td><td>';
             echo htmlspecialchars($record['year']);
-            echo '</td></td>';
+            echo '</td><td>';
             echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete movie"/>';
             echo '</td></tr>';
         }
