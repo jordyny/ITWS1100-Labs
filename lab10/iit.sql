@@ -29,8 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `actors` (
   `actorid` int(10) UNSIGNED NOT NULL,
-  `firstName` varchar(100) NOT NULL,
-  `lastName` varchar(100) NOT NULL,
+  `first_names` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
   `dob` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -38,7 +38,7 @@ CREATE TABLE `actors` (
 -- Dumping data for table `actors`
 --
 
-INSERT INTO `actors` (`actorid`, `firstName`, `lastName`, `dob`) VALUES
+INSERT INTO `actors` (`actorid`, `first_names`, `last_name`, `dob`) VALUES
 (1, 'Timothee', 'Chalamet', '1995-12-27'),
 (2, 'Finn', 'Wolfhard', '2002-12-23'),
 (3, 'Adam', 'Sandler', '1966-09-09'),
