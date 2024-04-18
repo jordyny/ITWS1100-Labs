@@ -20,8 +20,8 @@ VALUES (1, "Elizabeth", "1998"),
    -- create the tables for our movies
 CREATE TABLE `actors` (
    `actorid` int(10) unsigned NOT NULL AUTO_INCREMENT,
-   `firstName` varchar(100) NOT NULL,
-    `lastName` varchar(100) NOT NULL,
+   `first_names` varchar(100) NOT NULL,
+    `last_name` varchar(100) NOT NULL,
    `dob` date DEFAULT NULL,
    PRIMARY KEY (`actorid`)
 );
@@ -55,7 +55,7 @@ VALUES
 
 UPDATE actor_movie_relationship
 SET full_name = (
-        SELECT CONCAT(actors.firstName, ' ', actors.lastName)
+        SELECT CONCAT(actors.first_names, ' ', actors.last_name)
         FROM actors
         WHERE actors.actorid = actor_movie_relationship.actorid
     ),
