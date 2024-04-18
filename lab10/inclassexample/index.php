@@ -116,7 +116,7 @@ if ($havePost) {
 }
 ?>
 
-<h3>Ad Actor</h3>
+<h3>Add Actor</h3>
 <form id="addForm" name="addForm" action="index.php" method="post" onsubmit="return validate(this);">
    <fieldset>
       <div class="formData">
@@ -181,39 +181,6 @@ if ($havePost) {
    ?>
 </table>
 
-
-<h3>Movies</h3>
-<table id="moviesTable">
-<?php
-  if ($dbOk) {
-
-    $query = 'select * from movies order alphabetically';
-    $result = $db->query($query);
-    $numRecords = $result->num_rows;
-
-    echo '<tr><th>Name:</th><th>Date of Birth:</th><th></th></tr>';
-    for ($i=0; $i < $numRecords; $i++) {
-      $record = $result->fetch_assoc();
-      if ($i % 2 == 0) {
-        echo "\n".'<tr id="movie-' . $record['movieid'] . '"><td>';
-      } else {
-        echo "\n".'<tr class="odd" id="movie-' . $record['movieid'] . '"><td>';
-      }
-      echo htmlspecialchars($record['title']) . ', ';
-      echo '</td><td>';
-      echo htmlspecialchars($record['year']);
-      echo '</td><td>';
-      echo '<img src="resources/delete.png" class="deleteMovie" width="16" height="16" alt="delete actor"/>';
-      echo '</td></tr>';
-      echo '<tr><td colspan="3" style="white-space: pre;">';
-      print_r($record);
-      echo '</td></tr>';
-    }
-
-    $result->free();
-
-    $db->close();
-  }
 
 ?>
 </table>
