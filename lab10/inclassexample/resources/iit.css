@@ -168,6 +168,23 @@ td {
 }
 
 
+#relationshipTable {
+  width: 100%;
+  border-spacing: 0;
+  border: 1px solid #333;
+}
+#relationshipTable th {
+  background-color: #ddc;
+  padding: 2px 4px;
+}
+#relationshipTable td {
+  padding: 2px 4px;
+}
+#relationshipTable tr.odd td {
+  background-color: #eed;
+  color: black;
+}
+
 
 .boxedContent {
   margin: 0;
